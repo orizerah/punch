@@ -32,8 +32,5 @@ def punch(driver: ChromiumDriver):
     punch_button = driver.find_element(By.CLASS_NAME, 'entry-btn')
     punch_button.click()
 
-    try:
-        confirm_button = driver.find_element(By.NAME, 'jqi_state0_button')
-        confirm_button.click()
-    except Exception:
-        pass
+    confirm_button = driver.find_element(By.ID, 'jqi_state0_button')
+    confirm_button.click()
